@@ -19,6 +19,10 @@
         position: static;
     }
 
+    div.Item:hover {
+        cursor: pointer;
+    }
+
     .Item img {
         width: 30vw!important;
         height: 30vw!important;
