@@ -9,6 +9,16 @@
         font-size: 2em;
     }
 
+    div.Item:hover span {
+        transform: rotate(90deg);
+    }
+
+    div.Item:hover img {
+        transform: scale(1.1);
+        visibility: visible;
+        position: static;
+    }
+
     .Item img {
         width: 30vw!important;
         height: 30vw!important;
