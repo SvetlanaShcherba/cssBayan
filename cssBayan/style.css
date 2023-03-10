@@ -1,0 +1,84 @@
+@media all and (min-width: 1920px) {
+    div.All-items:hover div.Item-text {
+        color: black;
+    }
+
+    div.Container {
+        width: 50vw;
+        margin: 0 auto;
+        font-size: 2em;
+    }
+
+    .Item img {
+        width: 30vw!important;
+        height: 30vw!important;
+    }
+}
+
+@media all and (min-width: 820px) {
+    
+    div.Container {
+        width: 50vw;
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
+
+    img {
+        width: 30vw!important;
+        height: 30vw!important;
+    }
+}
+
+img {
+    padding: 2vw 0;
+    width: 50vw;
+    height: 50vw;
+    visibility: hidden;
+    position: absolute;
+    transition: transform 0.5s
+}
+
+input{
+    justify-content: flex-start;
+    margin: 0;
+}
+
+
+span {
+    justify-content: flex-end;
+    transform: rotate(45deg);
+    transition-duration: 0.4s;
+}
+
+h1 {
+   margin: 0;
+   padding: 2vw 0;  
+}
+
+
+.Item {
+    text-align: center;
+}
+
+
+.Item-text {
+    display: flex;
+    justify-content: space-between;
+}
+.Item:last-child {
+    padding-bottom: 0.6vw ;
+}
+
+.Container {
+    width:auto;
+    font-size: 1.3em;
+    background-color: antiquewhite;
+    padding: 0 5vw;
+}
+
+.All-items {
+    color: blue;
+    margin: 0;
+}
+
+
