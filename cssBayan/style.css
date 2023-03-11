@@ -1,28 +1,11 @@
 @media all and (min-width: 1920px) {
-    div.All-items:hover div.Item-text {
-        color: black;
-    }
-
+    
     div.Container {
         width: 50vw;
         margin: 0 auto;
         font-size: 2em;
     }
-
-    div.Item:hover span {
-        transform: rotate(90deg);
-    }
-
-    div.Item:hover img {
-        transform: scale(1.1);
-        visibility: visible;
-        position: static;
-    }
-
-    div.Item:hover {
-        cursor: pointer;
-    }
-
+    
     .Item img {
         width: 30vw!important;
         height: 30vw!important;
@@ -30,7 +13,6 @@
 }
 
 @media all and (min-width: 820px) {
-    
     div.Container {
         width: 50vw;
         margin: 0 auto;
@@ -45,54 +27,91 @@
 
 img {
     padding: 2vw 0;
-    width: 50vw;
-    height: 50vw;
     visibility: hidden;
     position: absolute;
-    transition: transform 0.5s
+    transition: transform 0.5s;
+    display: block;
+    margin: 0 auto;
 }
-
-input{
-    justify-content: flex-start;
-    margin: 0;
-}
-
 
 span {
-    justify-content: flex-end;
+    position: absolute;
+    visibility: hidden;
+    right: 0;
     transform: rotate(45deg);
     transition-duration: 0.4s;
 }
 
 h1 {
-   margin: 0;
-   padding: 2vw 0;  
-}
-
-
-.Item {
-    text-align: center;
-}
-
-
-.Item-text {
-    display: flex;
-    justify-content: space-between;
-}
-.Item:last-child {
-    padding-bottom: 0.6vw ;
+    margin: 0;
+    padding: 2vw 0;
 }
 
 .Container {
-    width:auto;
+    width: auto;
     font-size: 1.3em;
     background-color: antiquewhite;
     padding: 0 5vw;
+    border: 0.1vw solid rgb(224, 221, 221);
+    border-radius: 0.5vw;
 }
 
 .All-items {
     color: blue;
     margin: 0;
+}
+
+.Item {
+    position: relative;
+}
+
+div.Container:hover span {
+    visibility: visible;
+}
+
+div.Container:hover div.Item {
+    color: black;
+}
+
+div.Item:hover span {
+    transform: rotate(90deg);
+}
+
+div.Item:hover img {
+    transform: scale(1.1);
+    visibility: visible;
+    position: static;
+}
+
+div.Item:hover {
+    cursor: pointer;
+}
+
+.Item:last-child {
+    padding-bottom: 0.6vw;
+}
+
+.Item_toggle:checked + .Item_trigger {
+    color: black;
+}
+.Item:active .Item_trigger {
+    color: blue;
+    transition-duration: 0.4s;
+}
+
+.Item_toggle:checked ~ span {
+    color: black;
+}
+.Item_toggle:checked +.Item_trigger > img {
+    visibility: visible;
+    position: static;
+    width: 50vw;
+    height: 50vw;
+}
+.Item_trigger {
+    text-align: left;
+    display: block;
+    box-sizing: inherit;
 }
 
 
