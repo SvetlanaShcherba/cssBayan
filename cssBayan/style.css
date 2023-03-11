@@ -1,45 +1,20 @@
-@media all and (min-width: 1920px) {
-    
-    div.Container {
-        width: 50vw;
-        margin: 0 auto;
-        font-size: 2em;
-    }
-    
-    .Item img {
-        width: 30vw!important;
-        height: 30vw!important;
-    }
+hr {
+    margin: 0;
 }
-
-@media all and (min-width: 820px) {
-    div.Container {
-        width: 50vw;
-        margin: 0 auto;
-        font-size: 1.5em;
-    }
-
-    img {
-        width: 30vw!important;
-        height: 30vw!important;
-    }
-}
-
 img {
-    padding: 2vw 0;
+    width: 0;
+    height: 0;
     visibility: hidden;
-    position: absolute;
-    transition: transform 0.5s;
+    transition: 0.2s ease-in-out;
     display: block;
-    margin: 0 auto;
+    margin: 0.9vw auto;    
 }
 
 span {
-    position: absolute;
     visibility: hidden;
-    right: 0;
+    display: inline-block;
+    float: right;
     transform: rotate(45deg);
-    transition-duration: 0.4s;
 }
 
 h1 {
@@ -48,7 +23,8 @@ h1 {
 }
 
 .Container {
-    width: auto;
+    width: 50vw;
+    margin: 0 auto;
     font-size: 1.3em;
     background-color: antiquewhite;
     padding: 0 5vw;
@@ -61,29 +37,7 @@ h1 {
     margin: 0;
 }
 
-.Item {
-    position: relative;
-}
-
-div.Container:hover span {
-    visibility: visible;
-}
-
-div.Container:hover div.Item {
-    color: black;
-}
-
-div.Item:hover span {
-    transform: rotate(90deg);
-}
-
-div.Item:hover img {
-    transform: scale(1.1);
-    visibility: visible;
-    position: static;
-}
-
-div.Item:hover {
+.All-items:hover {
     cursor: pointer;
 }
 
@@ -91,27 +45,75 @@ div.Item:hover {
     padding-bottom: 0.6vw;
 }
 
-.Item_toggle:checked + .Item_trigger {
-    color: black;
-}
 .Item:active .Item_trigger {
     color: blue;
+    opacity: 0.7;
     transition-duration: 0.4s;
 }
 
-.Item_toggle:checked ~ span {
+.Item_toggle:checked+.Item_trigger {
     color: black;
 }
-.Item_toggle:checked +.Item_trigger > img {
+
+.Item_toggle:checked~span {
+    color: black;
+}
+
+.Item_toggle:checked+.Item_trigger>img {
     visibility: visible;
     position: static;
-    width: 50vw;
-    height: 50vw;
+    width: 30vw;
+    height: 30vw;
 }
+
 .Item_trigger {
-    text-align: left;
     display: block;
     box-sizing: inherit;
+    cursor: pointer;
+    padding-top: 1.5vw;
+}
+
+@media (hover: hover) {
+    div.All-items:hover span {
+        visibility: visible;
+        transition-duration: 0.2s;
+    }
+
+    section.Container:hover div.Item {
+        color: black;
+    }
+
+    div.Item:hover span {
+        transform: rotate(90deg);    
+    }
+
+    div.Item:hover img {
+        width: 30vw;
+        height: 30vw;;
+        visibility: visible;
+        position: static;
+    }
+    
+    
+}
+
+@media all and (min-width: 521px) {
+    section.Container {
+        font-size: 1.2em;
+    }
+}
+
+@media all and (min-width: 821px){
+    section.Container {
+        font-size: 1.5em;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    section.Container {
+        font-size: 2em;
+    }
+            
 }
 
 
