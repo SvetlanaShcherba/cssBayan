@@ -60,13 +60,6 @@ div.Item:active >label.Item_trigger {
     color: black;
 }
 
-/* .Item:active > .Item_toggle:checked + .Item_trigger {
-    color: blue;
-    opacity: 0.7;
-    transition-duration: 0.4s line 0s;
-} */
-
-
 .Item_toggle:checked+.Item_trigger>img {
     visibility: visible;
     width: 30vw;
